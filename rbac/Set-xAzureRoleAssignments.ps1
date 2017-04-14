@@ -110,6 +110,33 @@ Function Test-IsAuthenticatedRmAPI
 
 }#EndFunction Test-IsAuthenticatedRMAPI
 
+Function Test-AzureSubscriptionExist
+{
+<# 
+   .SYNOPSIS 
+        This function checks if the specified subscription exists
+   .DESCRIPTION 
+        This function checks if the specified subscription exists. If the user does not have access to the subscription then the subscription will not be visible, and in this case this function will still return false.
+   .EXAMPLE 
+        Test-AzureSubscriptionExist -SubscriptionName myAzureSubscription
+   .NOTES
+        Requirements: Copy this module to any location found in $env:PSModulePath
+        This module depends on the Azure Resource Manager PowerShell modules
+   
+#>
+[CmdletBinding()]
+[OutputType([System.Boolean])]
+Param(
+    [Parameter(Mandatory=$true,HelpMessage='Please enter the subscription name.')]
+    [ValidateNotNullOrEmpty()]
+    [String]$SubscriptionName
+)
+
+ return (Get-AzureRmSubscription | Select-Object -ExpandProperty SubscriptionName) -contains $SubscriptionName
+
+}#EndFunction Test-AzureSubscriptionExist
+
+
 #endregion
 
 #region --- MAIN PROGRAM ---
