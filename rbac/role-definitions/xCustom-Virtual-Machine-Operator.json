@@ -1,0 +1,21 @@
+{
+    "Name": "xCustom Virtual Machine Operator",
+    "Id": null,
+    "IsCustom": true,
+    "Description": "This role lets allows a user/group to read VM properties and diagnostics settings, start/stop and restart VMs but not modify VM settings or delete the VM.",
+    "Actions": [
+        "Microsoft.Authorization/*/read",
+        "Microsoft.Resources/subscriptions/read",
+        "Microsoft.Resources/subscriptions/resourceGroups/read",
+        "Microsoft.Compute/*/read",
+        "Microsoft.Compute/virtualMachines/start/action",
+        "Microsoft.Compute/virtualMachines/deallocate/action", 
+        "Microsoft.Compute/virtualMachines/poweroff/action",
+        "Microsoft.Compute/virtualMachines/restart/action",
+        "Microsoft.Compute/disks/read",
+        "Microsoft.Insights/alertRules/read",
+        "Microsoft.Insights/diagnosticSettings/read"
+    ],
+    "NotActions": [],
+    "AssignableScopes": []
+}

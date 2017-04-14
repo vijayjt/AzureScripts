@@ -1,0 +1,22 @@
+{
+  "Name": "xCustom Limited Subscription Contributor",
+  "Id": null,
+  "IsCustom": true,
+  "Description": "Allows the role to manage everything within a subscription except for granting access to other users/groups and managing network related resources.",
+  "Actions": [
+    "*"
+  ],
+  "NotActions": [
+       "Microsoft.Authorization/*/Write",
+       "Microsoft.Authorization/*/Delete",
+       "Microsoft.Network/*/Write",
+       "Microsoft.Network/*/Delete",
+       "Microsoft.DomainRegistration/*",
+       "Microsoft.Security/*",
+       "Microsoft.Sql/servers/firewallRules/write",
+       "Microsoft.Sql/servers/firewallRules/delete"
+  ],
+  "AssignableScopes": [
+    
+  ]
+}
