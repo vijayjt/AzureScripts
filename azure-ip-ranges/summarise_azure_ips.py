@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 ################################################################################
-# Author: Vijay Thakorlal
+# Author: Vijay Thakorlal and Morgan Jones (https://github.com/mogthesprog/)
 # Date: January 12, 2016
 # File name: summarise_azure_ips.py
 # Version: 0.0.1
